@@ -1,4 +1,4 @@
-des文件夹
+﻿des文件夹
 为lua的des so库
 进入des文件
 请修改makefile文件里的luajit的目录为您自己的真是目录
