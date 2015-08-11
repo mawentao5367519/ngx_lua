@@ -9,22 +9,27 @@ nginx + lua + C++
 
 1.安装依赖,我的是centos,其他系统请参考上边链接里的说明
   yum install readline-devel pcre-devel openssl-devel gcc
+  
 2.下载 openresty (可以下载最新的)
   wget http://openresty.org/download/ngx_openresty-1.7.7.2.tar.gz  
   tar -xzvf ngx_openresty-1.7.7.2.tar.gz
   ngx_openresty-1.7.7.2/bundle目录里存放着nginx核心和很多第三方模块，比如有我们需要的Lua和LuaJIT。
+  
 3.安装LuaJIT
   cd bundle/LuaJIT-2.1-20150120/  
   make clean && make && make install  
   ln -sf luajit-2.1.0-alpha /usr/local/bin/luajit 
+  
 4.下载ngx_cache_purge模块，该模块用于清理nginx缓存
   在bundle目录下
   wget https://github.com/FRiCKLE/ngx_cache_purge/archive/2.3.tar.gz  
   tar -xvf 2.3.tar.gz  
+  
 5.下载nginx_upstream_check_module模块，该模块用于ustream健康检查
   在bundle目录下
   wget https://github.com/yaoweibin/nginx_upstream_check_module/archive/v0.3.0.tar.gz  
   tar -xvf v0.3.0.tar.gz  
+  
 6.安装ngx_openresty
   在ngx_openresty-1.7.7.2目录下
   修改configure
