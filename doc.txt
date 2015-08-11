@@ -1,1 +1,14 @@
-test content
+des文件夹
+为lua的des so库
+进入des文件
+请修改makefile文件里的luajit的目录为您自己的真是目录
+然后直接make
+可以在当前目录产生so文件,拷贝so到luaLib下
+lua代码例子:
+local des = require("Deslib")
+
+--local res = des.DesEncrypt("aaaaaaaa","key")
+--print(res)
+
+local jiemi = des.DesDecrypt("ctyhPDciPPD+uVm31GQvyw==","key")
+print(jiemi)
