@@ -2,8 +2,11 @@
 nginx + lua + C++
 
 环境配置:
+
 推荐OpenResty安装
+
 安装步骤可以参考http://openresty.org/#Installation。
+
 1.安装依赖,我的是centos,其他系统请参考上边链接里的说明
   yum install readline-devel pcre-devel openssl-devel gcc
 2.下载 openresty (可以下载最新的)
