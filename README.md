@@ -3,7 +3,7 @@ nginx + lua + C++
 
 环境配置:
 
-推荐OpenResty安装
+推荐OpenResty安装(如果你已经安装过了nginx,请参考第9条)
 
 安装步骤可以参考http://openresty.org/#Installation。
 
@@ -105,5 +105,23 @@ nginx + lua + C++
   ngx.say("Hello World")
   
   快打开浏览器看看吧
+  
+  9.如果你系统已经有nginx了
+  
+  请先查看你的nginx -V的配置安装信息
+  
+  然后参见第6条的452行,添加你自己的nginx配置信息
+  
+  备份你自己的nginx安装目录里的sbin/nginx
+  
+  安装Openresty,注意--prefix的路径为你现在nginx的安装路径
+  
+  比如:我的nginx安装路径为/usr/local/nginx
+  
+	你的--prefix=/usr/local即可
+	
+  然后直接make && make install
+  
+  重新启动nginx即可
   
       
